@@ -3,12 +3,12 @@ import { ZoomIn } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 // ✅ IMPORT YOUR REAL IMAGES
-import img1 from "../assets/bedroom.jpg";
-import img2 from "../assets/bedroom1.png";
-import img3 from "../assets/bedroom2.jpeg";
-import img4 from "../assets/bedroom3.png";
-import img5 from "../assets/bedroom4.jpeg";
-import img6 from "../assets/bedroom5.jpeg";
+import img1 from "../assets/bedroom16.jpeg";
+import img2 from "../assets/bedroom15.jpeg";
+import img3 from "../assets/bedroom16.jpeg";
+import img4 from "../assets/bedroom13.jpeg";
+import img5 from "../assets/bedroom8.png";
+import img6 from "../assets/bedroom10.jpeg";
 
 const WorkPage: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);

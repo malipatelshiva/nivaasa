@@ -1,8 +1,8 @@
 import { CheckCircle } from 'lucide-react';
 
 // ✅ IMPORT YOUR LOCAL IMAGES
-import img1 from "../assets/bedroom2.jpeg";
-import img2 from "../assets/bedroom1.png";
+import img1 from "../assets/bedroom13.jpeg";
+import img2 from "../assets/bedroom15.jpeg";
 
 const AboutPage: React.FC = () => {
 

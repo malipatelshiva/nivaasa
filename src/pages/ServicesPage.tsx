@@ -2,11 +2,11 @@ import { Sofa, ChefHat, Bed, Home, Armchair } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 // ✅ IMPORT YOUR REAL IMAGES
-import img1 from "../assets/bedroom.jpg";
-import img2 from "../assets/bedroom1.png";
-import img3 from "../assets/bedroom2.jpeg";
+import img1 from "../assets/bedroom10.jpeg";
+import img2 from "../assets/bedroom16.jpeg";
+import img3 from "../assets/bedroom8.png";
 import img4 from "../assets/bedroom3.png";
-import img5 from "../assets/bedroom4.jpeg";
+import img5 from "../assets/bedroom9.png";
 
 // ✅ TYPE
 type Service = {

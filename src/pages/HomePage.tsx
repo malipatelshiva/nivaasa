@@ -2,70 +2,92 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ImageCarousel from '../components/ImageCarousel';
 
-// ✅ IMAGES
-import bedroom1 from "../assets/bedroom.jpg";
-import bedroom2 from "../assets/bedroom1.png";
-import bedroom3 from "../assets/bedroom2.jpeg";
-import bedroom4 from "../assets/bedroom3.png";
-import bedroom5 from "../assets/bedroom4.jpeg";
-import bedroom6 from "../assets/bedroom5.jpeg";
-import bedroom7 from "../assets/bedroom6.jpeg";
+// ✅ CLEAN IMAGE IMPORTS (MAKE SURE NAMES MATCH EXACTLY)
+import bed1 from "../assets/bedroom2.jpeg";
+import bed2 from "../assets/bedroom8.png";
+import bed3 from "../assets/bedroom9.png";
+import bed4 from "../assets/bedroom13.jpeg";
+import bed5 from "../assets/bedroom14.jpeg";
+import bed6 from "../assets/bedroom15.jpeg";
+import bed7 from "../assets/bedroom16.jpeg";
 
 const HomePage: React.FC = () => {
 
-  const aboutImages = [bedroom1, bedroom2, bedroom3];
-  const serviceImages = [bedroom4, bedroom5, bedroom6];
-  const workImages = [bedroom1, bedroom3, bedroom5];
-  const packageImages = [bedroom2, bedroom4, bedroom7];
+  const aboutImages = [bed1, bed2, bed3];
+  const serviceImages = [bed4, bed5, bed6];
+  const workImages = [bed1, bed3, bed5];
+  const packageImages = [bed2, bed4, bed7];
 
   return (
-    <div className="min-h-screen bg-white text-slate-900">
+    <div className="min-h-screen bg-white text-gray-900">
 
-      {/* 🔥 HERO */}
-      <div className="bg-white py-16 md:py-24 text-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 🔥 HERO SECTION */}
+      <section className="py-16 md:py-24 text-center">
+        <div className="max-w-5xl mx-auto px-4">
 
-          <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 leading-tight text-gray-900">
+          <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight">
             Transform Your Home into a
-            <span className="block text-red-500">
+            <span className="block text-red-500 mt-2">
               Luxury Living Space
             </span>
           </h1>
 
-          <p className="text-gray-600 mb-6 max-w-md mx-auto text-sm sm:text-base md:text-lg">
-            Nivaasa Living Spaces delivers premium residential interiors 
-            with elegance and comfort.
+          <p className="text-gray-600 mt-4 text-sm sm:text-base md:text-lg max-w-xl mx-auto">
+            Nivaasa Living Spaces delivers premium interior designs
+            with elegance, comfort, and modern aesthetics.
           </p>
 
           <Link
             to="/enquiry"
-            className="w-full sm:w-auto inline-block bg-red-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-600 transition"
+            className="mt-6 inline-block w-full sm:w-auto bg-red-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-600 transition"
           >
             Get Free Consultation
           </Link>
 
         </div>
-      </div>
+      </section>
 
-      {/* 🔥 TRUST */}
-      <div className="text-center py-6 md:py-10 bg-red-50">
-        <h2 className="text-lg sm:text-xl md:text-3xl font-bold text-gray-900 px-4">
+      {/* 🔥 TRUST SECTION */}
+      <section className="bg-red-50 py-6 md:py-10 text-center">
+        <h2 className="text-lg sm:text-xl md:text-3xl font-bold px-4">
           100+ Happy Clients | 50+ Projects Completed
         </h2>
-      </div>
+      </section>
 
-      {/* 🔥 SECTIONS */}
-      <div className="space-y-6 md:space-y-10 px-4 sm:px-6 lg:px-8 py-6 md:py-10">
+      {/* 🔥 MAIN SECTIONS */}
+      <section className="space-y-6 md:space-y-10 px-4 sm:px-6 lg:px-8 py-8 md:py-12">
 
-        <Section title="About Nivaasa" description="Premium residential interiors with modern design and expert execution." images={aboutImages} linkTo="/about" />
+        <Section
+          title="About Nivaasa"
+          description="Premium residential interiors with modern design and expert execution."
+          images={aboutImages}
+          linkTo="/about"
+        />
 
-        <Section title="Interior Services" description="Stylish and functional designs for every space." images={serviceImages} isReversed linkTo="/services" />
+        <Section
+          title="Interior Services"
+          description="Stylish and functional designs for every space."
+          images={serviceImages}
+          isReversed
+          linkTo="/services"
+        />
 
-        <Section title="Our Interior Work" description="Luxury interior projects showcasing elegance." images={workImages} linkTo="/work" />
+        <Section
+          title="Our Interior Work"
+          description="Luxury interior projects showcasing elegance."
+          images={workImages}
+          linkTo="/work"
+        />
 
-        <Section title="Interior Packages" description="Affordable and premium interior packages." images={packageImages} isReversed linkTo="/packages" />
+        <Section
+          title="Interior Packages"
+          description="Affordable and premium interior packages."
+          images={packageImages}
+          isReversed
+          linkTo="/packages"
+        />
 
-      </div>
+      </section>
 
     </div>
   );
@@ -79,16 +101,21 @@ type SectionProps = {
   linkTo: string;
 };
 
-const Section: React.FC<SectionProps> = ({ title, description, images, isReversed, linkTo }) => {
+const Section: React.FC<SectionProps> = ({
+  title,
+  description,
+  images,
+  isReversed,
+  linkTo
+}) => {
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-6xl mx-auto">
 
-      {/* 🔥 FIXED GRID */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-center bg-white border border-gray-200 rounded-2xl p-4 sm:p-6 md:p-8 shadow-md hover:shadow-xl transition">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center bg-white border rounded-2xl p-4 sm:p-6 shadow-md hover:shadow-xl transition">
 
-        {/* TEXT */}
+        {/* 🔥 TEXT */}
         <div className={isReversed ? "md:order-2" : ""}>
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 text-gray-900">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3">
             {title}
           </h2>
 
@@ -98,17 +125,17 @@ const Section: React.FC<SectionProps> = ({ title, description, images, isReverse
 
           <Link
             to={linkTo}
-            className="inline-block w-full sm:w-auto text-center bg-red-500 text-white px-5 py-2 rounded-md font-semibold hover:bg-red-600 transition"
+            className="block sm:inline-block text-center bg-red-500 text-white px-5 py-2 rounded-md font-semibold hover:bg-red-600 transition"
           >
             Explore {title}
           </Link>
         </div>
 
-        {/* 🔥 IMAGE FIX (IMPORTANT) */}
-        <div className={`${isReversed ? "md:order-1" : ""}`}>
-          <div className="rounded-xl overflow-hidden shadow-md h-[200px] sm:h-[250px] md:h-[300px]">
+        {/* 🔥 IMAGE FIX */}
+        <div className={isReversed ? "md:order-1" : ""}>
+          <div className="w-full h-[220px] sm:h-[260px] md:h-[320px] overflow-hidden rounded-xl">
 
-            {/* 👉 FIX: Force height for carousel */}
+            {/* IMPORTANT: Carousel should fill height */}
             <ImageCarousel images={images} />
 
           </div>
